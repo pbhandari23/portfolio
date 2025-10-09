@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Background from "@/components/Background";
+import AudioCard from "@/components/AudioCard";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,9 +33,9 @@ export default function FourierPage() {
 
                     {/* Saxophone Images (side by side) */}
                     <div className="mt-12">
-                        <h2 className="mb-4 text-lg font-semibold text-zinc-100">Saxophone</h2>
+                        <h2 className="mb-4 text-lg font-semibold text-zinc-100">Photos</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30">
+                            <figure className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30">
                                 <Image
                                     src="/screenshots/sax1.jpg"
                                     alt="Saxophone performance photo 1"
@@ -43,9 +44,12 @@ export default function FourierPage() {
                                     sizes="(min-width: 768px) 45vw, 100vw"
                                     priority
                                 />
-                            </div>
+                                <figcaption className="absolute bottom-0 left-0 w-full bg-black/60 text-zinc-200 text-sm text-center py-1 backdrop-blur-sm">
+                                    Masterclass with Zach Shemon, 2025
+                                </figcaption>
+                            </figure>
 
-                            <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30">
+                            <figure className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-black/30">
                                 <Image
                                     src="/screenshots/sax2.png"
                                     alt="Saxophone performance photo 2"
@@ -54,9 +58,13 @@ export default function FourierPage() {
                                     sizes="(min-width: 768px) 45vw, 100vw"
                                     priority
                                 />
-                            </div>
+                                <figcaption className="absolute bottom-0 left-0 w-full bg-black/60 text-zinc-200 text-sm text-center py-1 backdrop-blur-sm">
+                                    OSU Saxophone Quartet Performance, 2025
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
+
 
 
 
@@ -80,23 +88,14 @@ export default function FourierPage() {
 
                         </motion.section>
 
-                        {/* Links */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
-                            className="mt-10 flex flex-wrap items-center gap-4"
-                        >
-                            <Link
-                                href="https://github.com/lilpb01/Fourier-Drawing-with-Epicycles"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-4 py-2 bg-zinc-800 rounded hover:bg-zinc-700 transition"
-                            >
-                                GitHub
-                            </Link>
 
-                        </motion.div>
+                        <div className="grid gap-6 sm:grid-cols-2">
+                            <AudioCard title="Caprice from Improvisation et Caprice by Eugeune Bozza" src="/audio/bozza.m4a" />
+                            <AudioCard title="Ferling 17" src="/audio/ferling17.m4a" />
+
+                        </div>
+
+
                     </motion.section>
 
                     {/* Back to Home Button */}
