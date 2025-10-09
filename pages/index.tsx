@@ -205,12 +205,19 @@ export default function Home() {
         </section>
 
         {/* Other */}
-        <section id="other" className="mx-auto my-24 max-w-5xl px-6">
+        <section id="other" className="mx-auto mt-16 max-w-5xl px-6">
           <FadeInSection>
             <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
-              <h3 className="text-lg font-semibold text-zinc-100 md:text-xl">Contact</h3>
+              <h3 className="text-lg font-semibold text-zinc-100 md:text-xl">Other</h3>
               <RevealLine />
-            
+              <FadeInSection>
+                <ProjectCard
+                  title="Saxophone"
+                  desc="🎷"
+                  href="/projects/fourier "
+                />
+              </FadeInSection>
+
             </div>
           </FadeInSection>
         </section>
