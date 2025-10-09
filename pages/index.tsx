@@ -211,10 +211,10 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-zinc-100 md:text-xl">Other</h3>
               <RevealLine />
               <FadeInSection>
-                <ProjectCard
+                <SquareCard
                   title="Saxophone"
-                  desc="🎷"
-                  href="/projects/fourier "
+                  emoji="🎷"
+                  href="/projects/saxophone"
                 />
               </FadeInSection>
 
@@ -269,6 +269,27 @@ function ProjectCard({ title, desc, href }: { title: string; desc: string; href:
     </Link>
   );
 }
+
+function SquareCard({ title, emoji, href }: { title: string; emoji: string; href: string }) {
+  return (
+    <Link href={href} passHref>
+      <div
+        className="group flex flex-col items-center justify-center 
+                   w-40 h-40 sm:w-48 sm:h-48 
+                   rounded-2xl border border-white/5 bg-white/[0.02] 
+                   transition hover:border-white/20 hover:bg-white/[0.06] 
+                   hover:scale-[1.05] hover:shadow-lg 
+                   cursor-pointer select-none"
+      >
+        <span className="text-4xl mb-2">{emoji}</span>
+        <h3 className="text-sm font-medium text-zinc-100 group-hover:text-white">
+          {title}
+        </h3>
+      </div>
+    </Link>
+  );
+}
+
 
 function IconLink({
   href,
