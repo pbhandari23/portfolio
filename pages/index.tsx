@@ -18,7 +18,6 @@ function FadeInSection({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Thin line that grows under headings
 function RevealLine() {
   return (
     <motion.div
@@ -47,6 +46,7 @@ export default function Home() {
               <Link href="#about" className="text-zinc-400 transition hover:text-zinc-100">About</Link>
               <Link href="#education" className="text-zinc-400 transition hover:text-zinc-100">Education</Link>
               <Link href="#projects" className="text-zinc-400 transition hover:text-zinc-100">Projects</Link>
+              <Link href="#other" className="text-zinc-400 transition hover:text-zinc-100">Other</Link>
               <Link href="#contact" className="text-zinc-400 transition hover:text-zinc-100">Contact</Link>
             </nav>
           </div>
@@ -200,6 +200,17 @@ export default function Home() {
                   href="/projects/music "
                 />
               </FadeInSection>
+            </div>
+          </FadeInSection>
+        </section>
+
+        {/* Other */}
+        <section id="other" className="mx-auto my-24 max-w-5xl px-6">
+          <FadeInSection>
+            <div className="rounded-3xl border border-white/5 bg-white/[0.02] p-6 md:p-8">
+              <h3 className="text-lg font-semibold text-zinc-100 md:text-xl">Contact</h3>
+              <RevealLine />
+            
             </div>
           </FadeInSection>
         </section>
