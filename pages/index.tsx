@@ -160,13 +160,6 @@ export default function Home() {
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <FadeInSection>
                 <ProjectCard
-                  title="Job Tracker"
-                  desc="Full-stack app with FastAPI + React + SQLite/JWT auth."
-                  href="/projects/job-tracker"
-                />
-              </FadeInSection>
-              <FadeInSection>
-                <ProjectCard
                   title="Exoplanet Classifier"
                   desc="End-to-end ML for exoplanet habitability with EDA, feature engineering, and model eval."
                   href="/projects/exoplanet"
@@ -198,6 +191,13 @@ export default function Home() {
                   title="Music Scale Evenness Analyzer"
                   desc="Python audio analysis tool for measuring musical scale timing and evenness."
                   href="/projects/music "
+                />
+              </FadeInSection>
+              <FadeInSection>
+                <ProjectCard
+                  title="Job Tracker"
+                  desc="Full-stack app with FastAPI + React + SQLite/JWT auth."
+                  href="/projects/job-tracker"
                 />
               </FadeInSection>
             </div>
