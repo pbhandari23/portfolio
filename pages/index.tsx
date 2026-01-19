@@ -127,7 +127,7 @@ export default function Home() {
         {/* Education */}
         <section id="education" className="mx-auto mt-16 max-w-5xl px-6">
           <FadeInSection>
-            <h2 className="text-xl font-semibold text-zinc-100 md:text-2xl">Education</h2>
+            <h2 className="text-xl font-semibold text-zinc-100 md:text-2xl">Education: Relevant Courses</h2>
             <RevealLine />
             <div className="mt-4 grid gap-4 sm:grid-cols-2 text-sm text-zinc-400">
               <ul className="list-disc list-inside space-y-1">
@@ -136,9 +136,12 @@ export default function Home() {
                 <li>CSE 2321 – Foundations I: Discrete Structures</li>
                 <li>CSE 2331 – Foundations II: Data Structures & Algorithms</li>
                 <li>CSE 2421 – Systems I: Introduction to Low-Level Programming</li>
-                <li>STAT 3470 – Introduction to Probability & Statistics for Engineers</li>
+                <li>CSE 2431 – Systems II: Introduction to Operating Systems</li>
+                <li>CSE 3241 – Introduction to Database Systems</li>
+                <li>CSE 3521 – Survey of AI I: Basic Techniques</li>
               </ul>
               <ul className="list-disc list-inside space-y-1">
+                <li>STAT 3470 – Introduction to Probability & Statistics for Engineers</li>
                 <li>STAT 3201 – Introduction to Probability for Data Analytics</li>
                 <li>STAT 3202 – Introduction to Statistical Inference for Data Analytics</li>
                 <li>STAT 3301 – Statistical Modeling for Discovery I</li>
