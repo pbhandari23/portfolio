@@ -163,9 +163,18 @@ export default function Home() {
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <FadeInSection>
                 <ProjectCard
+                  title="Heisman Vote Predictor"
+                  desc="College-football ML project that predicts Heisman vote totals and projects a quarterback leaderboard."
+                  href="/projects/heisman"
+                  tech={["R", "Python", "cfbfastR", "scikit-learn"]}
+                />
+              </FadeInSection>
+              <FadeInSection>
+                <ProjectCard
                   title="NBA Salary Forecasting"
                   desc="Regression system and Streamlit app for predicting next-season NBA player salaries from historical stats and contract data."
                   href="/projects/nba-salary-forecast"
+                  tech={["Python", "Streamlit", "nba_api", "scikit-learn"]}
                 />
               </FadeInSection>
               <FadeInSection>
@@ -173,6 +182,7 @@ export default function Home() {
                   title="Exoplanet Classifier"
                   desc="End-to-end ML for exoplanet habitability with EDA, feature engineering, and model eval."
                   href="/projects/exoplanet"
+                  tech={["Python", "pandas", "scikit-learn", "Tableau"]}
                 />
               </FadeInSection>
               <FadeInSection>
@@ -180,6 +190,7 @@ export default function Home() {
                   title="Brain Tumor Classifier"
                   desc="Deep learning model using ResNet18 for brain tumor MRI classification with Grad-CAM insights."
                   href="/projects/braintumor"
+                  tech={["Python", "PyTorch", "ResNet18", "Tableau"]}
                 />
               </FadeInSection>
               <FadeInSection>
@@ -187,6 +198,7 @@ export default function Home() {
                   title="ASL Sign Detector"
                   desc="Computer vision project with real-time ASL alphabet detection with MediaPipe and Random Forest."
                   href="/projects/signdetector"
+                  tech={["Python", "MediaPipe", "OpenCV", "scikit-learn"]}
                 />
               </FadeInSection>
               <FadeInSection>
@@ -194,6 +206,7 @@ export default function Home() {
                   title="Fourier Series Visualizer"
                   desc="Interactive Fourier series shape reconstruction with epicycles with Python."
                   href="/projects/fourier "
+                  tech={["Python", "Pygame", "DFT", "Visualization"]}
                 />
               </FadeInSection>
               <FadeInSection>
@@ -201,6 +214,7 @@ export default function Home() {
                   title="Music Scale Evenness Analyzer"
                   desc="Python audio analysis tool for measuring musical scale timing and evenness."
                   href="/projects/music "
+                  tech={["Python", "Librosa", "NumPy", "SciPy"]}
                 />
               </FadeInSection>
             </div>
@@ -257,7 +271,17 @@ export default function Home() {
 }
 
 // ————— Reusable components —————
-function ProjectCard({ title, desc, href }: { title: string; desc: string; href: string }) {
+function ProjectCard({
+  title,
+  desc,
+  href,
+  tech,
+}: {
+  title: string;
+  desc: string;
+  href: string;
+  tech: string[];
+}) {
   return (
     <Link href={href} passHref>
       <div className="group cursor-pointer rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition 
@@ -268,6 +292,16 @@ function ProjectCard({ title, desc, href }: { title: string; desc: string; href:
           <span className="text-xs text-zinc-500 transition group-hover:text-zinc-300">↗</span>
         </div>
         <p className="mt-2 text-sm leading-relaxed text-zinc-400">{desc}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tech.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-zinc-300"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
     </Link>
   );

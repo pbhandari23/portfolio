@@ -193,7 +193,7 @@ export default function NbaSalaryForecastPage() {
                                     href="https://pbhandari23-nbasalaries.streamlit.app/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-4 py-2 bg-zinc-800 rounded hover:bg-zinc-700 transition"
+                                    className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-500 transition"
                                 >
                                     Open Streamlit Demo
                                 </Link>
