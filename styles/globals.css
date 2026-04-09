@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: 'Times New Roman', serif;
 }
+
+/* Brighten secondary text globally without changing each page individually. */
+.text-zinc-400 {
+  color: rgb(212 212 216) !important;
+}
+
+.text-zinc-500 {
+  color: rgb(161 161 170) !important;
+}

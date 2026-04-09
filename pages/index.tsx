@@ -163,6 +163,14 @@ export default function Home() {
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <FadeInSection>
                 <ProjectCard
+                  title="ScratchML"
+                  desc="Machine learning library built from scratch with NumPy, including models, preprocessing, tests, and a scikit-learn-style API."
+                  href="/projects/scratchml"
+                  tech={["Python", "NumPy", "Testing", "API Design"]}
+                />
+              </FadeInSection>
+              <FadeInSection>
+                <ProjectCard
                   title="Heisman Vote Predictor"
                   desc="College-football ML project that predicts Heisman vote totals and projects a quarterback leaderboard."
                   href="/projects/heisman"
